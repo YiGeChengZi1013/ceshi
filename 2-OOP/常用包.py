@@ -260,3 +260,143 @@ print(os.name)
 
 
 
+print("*" * 30)
+# os.path模块 ,跟路径相关的模块
+# abspath()将路径转化成绝对路径
+# 格式:os.path.abspath('路径')
+# 返回值:路径的绝对路径形式
+
+absp = os.path.abspath('.')
+print(absp)
+
+
+# basename() 获取路径中的目录名最后一部分
+# 格式:os.path.basename(路径)
+# 返回值:文件名字符串
+# bn = os.path.basename("/a/b/c/d")  打印结果为"d"
+
+# join() 将多个路径拼合成一个路径
+# 格式: os.path.join(路径1, 路径2....)
+# 返回值:组合之后的新路径字符串
+
+bd = "\home\\tlxy"
+fn = "dana.haha"
+p = os.path.join(bd, fn)
+print(p)
+
+# split() 将路径切割为文件夹部分和当前文件部分
+# 格式:os.path.split(路径)
+# 返回值 : 路径和文件名车组成的元组
+t = os.path.split("\home\tlxy\dana.haha")
+print(t)
+# 或者
+d, p = os.path.split("\home\\tlxy\dana.haha")
+print(d, p)
+
+# isdir() 检测是否是目录
+# 格式: os.path.isdir(路径)
+# 返回值:布尔值
+
+
+
+# exists() 检测文件或者目录是否存在
+# 格式:os.path.exists(路径)
+# 返回值:布尔值
+
+# ##############################################################################
+
+
+# shutil 模块
+
+
+# copy() 复制文件
+# 格式 : shutil.copy(来源路径,目标路径)
+# 返回值: 返回目标路径
+# 拷贝的同时,可以给文件重命名
+import shutil
+# print(shutil.copy("来源路径", "目标路径"))
+
+
+# copy2() 复制文件,保留原数据(文件信息)
+# 格式: shutil.copy2("来源路径","目标路径")
+# 返回值:返回目标路径
+# 注意: copy和copy2的唯一区别在于copy2复制文件时尽量保留元数据
+
+
+
+# copyfile() 将一个文件的内容复制到另一个文件当中
+# 格式: shutil.copyfile("源路径", "目标路径")
+# 返回值 :无
+# print(shutil.copyfile("源目标", "目标路径"))
+
+
+# move() 移动文件/文件夹
+# 格式:shutil.move("原路径", "目标路径")
+# 返回值:无
+
+
+# ########################################################################################
+
+# 归档和压缩
+#     归档:把多个文件或者文件夹合并到一个文件当中
+#     压缩:用算法把多个文件或者文件夹无损或者有损合并到一个文件当中
+
+# make_archive() 归档操作
+# 格式 : shutil.make_archive('归档之后的目录和文件名','后缀','需要归档的文件夹')
+# 返回值:归档之后的地址
+
+# unpack_archive() 解包操作
+# 格式:shutil.unpack_archive('归档文件地址','解包之后的地址')
+# 返回值:解包之后的地址
+
+
+
+# zip 压缩包  模块: zipfile
+import zipfile
+# zf = zipfile.ZipFile("zip文件名") # 创建一个zipfile对象,表示一个zip文件.参数表示文件的路径或者类文件对象
+# rst = zf.getinfo("name") # 获取zip文档内指定文件的信息,返回一个zipfile.Zipfile对象,它包括文件的详细信息
+#
+# zipfile(名称例如:zf).namelist()  #获取zip文档中所有文件的名称列表 ,无参数
+# zipfile(名称例如:zf).extractall("参数") # 解压zip文档中的所有文件到当前目录.参数为zip文档的所有文件名称列表
+# 例: rst = zf.extractall("解压到那个目录路径")
+
+
+# ############################################################################
+
+# random 随机数
+# 所有的随机模块都是伪随机
+
+# random（） 获取0-1之间的随机小数
+# 格式： random.random()
+# 返回值:随机0-1之间的小数
+import random
+print(random.random())
+print(random.randint(0, 101))  # 随机获取指定单位内的整数
+
+
+# choice() 随机返回序列中的某个值
+# 格式: random.choice(序列)
+# 返回值: 序列中的某个值
+l = [str(i)+ "haha" for i in range(10)]
+print(l)
+
+rst = random.choice(l)
+print(rst)
+
+
+# shuffle() 随机打乱列表
+# 格式:random.shuffle(列表)
+# 返回值:打乱顺序之后的列表
+
+l1 = [i for i in range(10)]
+random.shuffle(l1)
+print(l1)
+
+
+# randint(a, b) : 返回一个a到b之间的随机整数,包含a和b
+
+
+
+
+
+
