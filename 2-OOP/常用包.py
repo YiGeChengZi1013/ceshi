@@ -77,7 +77,7 @@ print(time.daylight)
 
 # 获取时间戳
 print(time.time())
-# 结果是浮点数
+# 结果是浮点数 1546658064.5517719
 
 
 # 获取当前时间
@@ -150,6 +150,64 @@ print(ftt)
 #     datetime常见属性
 #     datetime.date : 一个理想化的日期,提供
 import datetime
+print(datetime.date(2019, 1, 5))
+# datetime.datetime
+from datetime import datetime
+# 常用类方法
+#     today
+#     now
+#     utcnow
+#     fromtimestamp: 从时间戳中返回本地时间
+dt = datetime(2019, 1, 5)
+print(dt.today())
+print(dt.now())
+print(dt.fromtimestamp(time.time()))
+
+# datetime.timedelta 表示一个时间间隔
+
+from datetime import datetime, timedelta
+
+t1 = datetime.now()
+print(t1.strftime("%Y-%m-%d  %H:%M:%S"))
+
+# td表示以小时的时间长度
+td = timedelta(hours=1)
+
+# 当前时间加上时间间隔后,把得到的一个小时后的时间格式化输出
+print((t1+td).strftime("%Y-%m-%d  %H:%M:%S"))
+
+# timeit 时间测量工具
+
+def p():
+    time.sleep(3.6)
+t2 = time.time()
+p()
+print(time.time() - t2 )
+
+
+
+# ##############################################################################################################
+
+# os 操作系统相关
+#     跟操作系统相关,主要是文件操作
+#     主要包含在三个模块里
+#         os, 操作系统目录相关
+#         os.path 系统路径相关操作
+#         shutil 高级文件操作,目录树的操作,文件赋值,删除,移动.
+# os 模块
+#     getcwd() 获取当前的工作目录
+#     格式:os.getcwd()
+#     返回值:当前工作路径的字符串
+#     当前工作目录就是程序都在进行文件相关操作,默认查找文件的目录
+import os
+
+print(os.getcwd())
+
+    # chdir() 改变当前的工作目录
+    # change directory
+    # 格式:os.chdir(路径)
+    # 返回值 : 无
+
 
 
 
