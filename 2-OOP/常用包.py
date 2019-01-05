@@ -205,7 +205,7 @@ print(os.getcwd())
 
     # chdir() 改变当前的工作目录
     # change directory
-    # 格式:os.chdir(路径)
+    # 格式:os.chdir('路径')
     # 返回值 : 无
 
 
