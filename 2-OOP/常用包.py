@@ -207,8 +207,56 @@ print(os.getcwd())
     # change directory
     # 格式:os.chdir('路径')
     # 返回值 : 无
+# 例: os.chdir('/root/home/')
 
 
+# listdir()获取一个目录中所有子目录和文件的名称列表
+# 格式:os.listdir(目录路径)  默认当前目录
+# 返回值:所有子目录和文件名称的列表
+ld = os.listdir()
+print(ld)
+
+# makedirs()  递归创建文件夹
+# 格式 : os.makedirs(递归路径)  默认当前的工作目录
+# 返回值: 无
+# 递归路径:多文件夹层层包含的路径就是递归路径
+
+# rst = os.makedirs("G:/a/b/c/d")
+
+# system() 运行系统shell命令
+# 格式: os.system(系统命令)
+# 返回值: 打开一个shell或者终端界面
+# print(os.system("dir"))
+
+# getenv() 获取指定的系统环境变量值
+# 格式: os.getenv('环境变量名')
+# 返回值: 指定环境变量名对应的值
+
+rst = os.getenv("PATH")
+print(rst)
+
+
+# exit() 退出当前程序
+# 格式: exit()
+# 返回值 :无
+
+
+# 值部分(在写代码的时候尽量不要手动拼写地址,因为手动拼写的路径可能不具有移植性)
+# 例:
+#     print("/home/tlxy" + "/" + "/a/b")
+#     os.curdir : currentn dir ,当前目录
+#     os.pardir :  parent dir , 父目录
+#     os.sep :当前系统的路径分隔符
+#     os.linesep: 当前系统的换行符
+#           windows : "\r\n"
+#           unix,linux,macos :"\n"
+#     os.name : 当前系统名称
+print("*"*30)
+print(os.curdir)
+print(os.pardir)
+print(os.sep)
+print(os.linesep)
+print(os.name)
 
 
 
