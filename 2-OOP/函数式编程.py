@@ -111,17 +111,56 @@ print(rst)
 # 需要定义过滤函数
 # 过滤函数要求有输入,返回布尔值
 
+def  isEven(a):
+    return a % 2 == 0
+
+l = [1, 2, 3, 4, 5, 6, 7]
+
+rst = filter(isEven, l)
+print([i for i in rst])
+
+# 高阶函数-排序 sorted
+#     把一个序列按照给定算法进行排序.
+#     key: 在排序中对每一个元素进行key函数运算,可以理解成按照key函数定义的逻辑进行排序
+#     python2 和python3 相差很大
+# 例子1:
+a = [5, 6, 7, 1, 25, 63, 45, 89, 12]
+al = sorted(a, reverse=True)
+print(al)
+
+al = sorted(a)
+print(al)
+
+# 例子2:
+b = [5, 6, 7, 1, -25, 63, -45, 89, -12]
+bl = sorted(b, key=abs, reverse=True)
+print(bl)
+
+# sorted()排序函数,可以对字符串列表排序
+
+
+
+
+# 返回函数
+#     函数可以返回具体的值
+#     也可以返回一个函数作为结果
+
+# 函数作为返回值返回,被返回的函数在函数体内定义
+#例子:
+def aa():
+    def bb():
+        print("我是bb")
+        return 3
+    return bb()
+
+print(aa())
 
 
 
 
 
 
-
-
-
-
-
+# 闭包
 
 
 
