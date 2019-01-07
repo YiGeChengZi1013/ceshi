@@ -387,15 +387,13 @@ print(rst)
 # shuffle() 随机打乱列表
 # 格式:random.shuffle(列表)
 # 返回值:打乱顺序之后的列表
-
 l1 = [i for i in range(10)]
 random.shuffle(l1)
 print(l1)
 
 
 # randint(a, b) : 返回一个a到b之间的随机整数,包含a和b
-
-
+print(random.randint(100, 200))
 
 
 
