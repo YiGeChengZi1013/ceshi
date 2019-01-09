@@ -114,6 +114,16 @@ logging.log(logging.CRITICAL, "This is a critical log.")
         处理器（handler）：把产生的日志发送到相应的目的地
         过滤器（filter）：要更精细的控制哪些日志输出
         格式器（formatter）：对输出信息进行格式化
+    
+    logger
+        产生一个日志
+        操作
+        Logger.setLevel()	设置日志器将会处理的日志消息的最低严重级别
+        Logger.addHandler() 和 Logger.removeHandler()	为该logger对象添加 和 移除一个handler对象
+        Logger.addFilter() 和 Logger.removeFilter()	为该logger对象添加 和 移除一个filter对象
+
+后面还有。。。。。。。。。。。。。。。。。。。。。。。
+
 
 '''
 
