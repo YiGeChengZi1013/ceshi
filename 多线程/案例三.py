@@ -4,7 +4,7 @@
 # 计算总的运行使时间
 
 import time
-import _thread as thread
+
 import threading
 
 
@@ -22,12 +22,12 @@ def loop2():
 
 # 带一个参数的线程调用
 def loop3(arg):
-    print("我是参数:", arg, time.ctime())
+    print("我是参数1:", arg, time.ctime())
 
 
 # 带二个参数的线程调用
 def loop4(arg1, arg2):
-    print("我是参数1:", arg1, "和参数2：", arg2, "---------", time.ctime())
+    print("我是参数2:", arg1, "和参数3：", arg2, "---------", time.ctime())
 
 
 
@@ -42,10 +42,10 @@ def main():
     t3.start()
     t4 = threading.Thread(target=loop4, args=("nine", "jiu"))
     t4.start()
-    # thread.start_new_thread(loop1, ())
-    # thread.start_new_thread(loop2, ())
-    # thread.start_new_thread(loop3, ("haha",))
-    # thread.start_new_thread(loop4, ("123", "456"))
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
     print('程序end time :', time.ctime())
 
 
