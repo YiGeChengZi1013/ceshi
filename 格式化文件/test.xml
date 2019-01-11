@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<school>
-<!-- 这是注释部分 -->
-
-
+<school xmlns:student="http://my_student" xmlns:room="http://my_name">
+    <student:namne>haha</student:namne>
+    <room:name>1254</room:name>
 
 </school>
