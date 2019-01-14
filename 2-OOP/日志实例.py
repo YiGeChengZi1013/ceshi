@@ -1,4 +1,4 @@
-'''
+"""
 1. 需求
     现在有以下几个日志记录的需求：
 
@@ -14,7 +14,7 @@
     2）日志需要被发送到两个不同的目的地，因此需要为日志器设置两个handler；另外，两个目的地都是磁盘文件，因此这两个handler都是与FileHandler相关的；
     3）all.log要求按照时间进行日志切割，因此他需要用logging.handlers.TimedRotatingFileHandler; 而error.log没有要求日志切割，因此可以使用FileHandler;
     4）两个日志文件的格式不同，因此需要对这两个handler分别设置格式器；
-'''
+"""
 
 import logging
 import logging.handlers

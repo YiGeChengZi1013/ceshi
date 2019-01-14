@@ -3,3 +3,8 @@
 2019-01-09 11:49:10,634 - WARNING - warning message
 2019-01-09 11:49:10,634 - ERROR - error message
 2019-01-09 11:49:10,638 - CRITICAL - critical message
+2019-01-14 17:13:16,876 - DEBUG - debug message
+2019-01-14 17:13:16,876 - INFO - info message
+2019-01-14 17:13:16,877 - WARNING - warning message
+2019-01-14 17:13:16,877 - ERROR - error message
+2019-01-14 17:13:16,877 - CRITICAL - critical message
